@@ -1,0 +1,1117 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor:BME280 U1
+U 1 1 5BD4C7F6
+P 1550 6000
+F 0 "U1" H 1120 6046 50  0000 R CNN
+F 1 "BME280" H 1120 5955 50  0000 R CNN
+F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 1550 5800 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280_DS001-11.pdf" H 1550 5800 50  0001 C CNN
+	1    1550 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Optical:BH1603FVC U3
+U 1 1 5BD4C948
+P 2650 1850
+F 0 "U3" H 2625 2265 50  0000 C CNN
+F 1 "BH1603FVC" H 2625 2174 50  0000 C CNN
+F 2 "Sensor_Optical:WSOF6" H 2650 1850 50  0001 C CNN
+F 3 "" H 2650 1850 50  0001 C CNN
+	1    2650 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5BD4CCB0
+P 2600 3900
+F 0 "R4" H 2670 3946 50  0000 L CNN
+F 1 "10k" H 2670 3855 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2530 3900 50  0001 C CNN
+F 3 "~" H 2600 3900 50  0001 C CNN
+	1    2600 3900
+	1    0    0    -1  
+$EndComp
+Text GLabel 2750 3350 2    50   Input ~ 0
+MQ-150_OUT
+Wire Wire Line
+	2750 3350 2450 3350
+Wire Wire Line
+	2450 3550 2600 3550
+Wire Wire Line
+	2600 3550 2600 3750
+$Comp
+L power:GND #PWR0101
+U 1 1 5BD4CF34
+P 2600 4300
+F 0 "#PWR0101" H 2600 4050 50  0001 C CNN
+F 1 "GND" H 2605 4127 50  0000 C CNN
+F 2 "" H 2600 4300 50  0001 C CNN
+F 3 "" H 2600 4300 50  0001 C CNN
+	1    2600 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 4300 2600 4200
+Wire Wire Line
+	2600 4200 2900 4200
+Wire Wire Line
+	2900 4200 2900 3450
+Wire Wire Line
+	2900 3450 2450 3450
+Connection ~ 2600 4200
+Wire Wire Line
+	2600 4200 2600 4050
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5BD4D084
+P 2450 6450
+F 0 "#PWR0102" H 2450 6300 50  0001 C CNN
+F 1 "+3.3V" H 2465 6623 50  0000 C CNN
+F 2 "" H 2450 6450 50  0001 C CNN
+F 3 "" H 2450 6450 50  0001 C CNN
+	1    2450 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0103
+U 1 1 5BD4D1F8
+P 1700 2850
+F 0 "#PWR0103" H 1700 2700 50  0001 C CNN
+F 1 "+5V" H 1715 3023 50  0000 C CNN
+F 2 "" H 1700 2850 50  0001 C CNN
+F 3 "" H 1700 2850 50  0001 C CNN
+	1    1700 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:BSS138 Q1
+U 1 1 5BD50538
+P 1150 3150
+F 0 "Q1" H 1355 3196 50  0000 L CNN
+F 1 "BSS138" H 1355 3105 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1350 3075 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 1150 3150 50  0001 L CNN
+	1    1150 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BD505E5
+P 1250 3850
+F 0 "R1" H 1320 3896 50  0000 L CNN
+F 1 "100k" H 1320 3805 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1180 3850 50  0001 C CNN
+F 3 "~" H 1250 3850 50  0001 C CNN
+	1    1250 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 3700 1250 3450
+Wire Wire Line
+	1250 2950 1250 2900
+Wire Wire Line
+	1250 2900 1700 2900
+Wire Wire Line
+	1700 2900 1700 2850
+Wire Wire Line
+	1700 2900 1700 3350
+Wire Wire Line
+	1700 3350 1850 3350
+Connection ~ 1700 2900
+Wire Wire Line
+	1250 3450 1850 3450
+Connection ~ 1250 3450
+Wire Wire Line
+	1250 3450 1250 3350
+Wire Wire Line
+	1700 3350 1700 3550
+Wire Wire Line
+	1700 3550 1850 3550
+Connection ~ 1700 3350
+Text GLabel 750  3150 3    50   Input ~ 0
+MQ-150_Toggle
+$Comp
+L power:GND #PWR0104
+U 1 1 5BD50D7A
+P 1250 4150
+F 0 "#PWR0104" H 1250 3900 50  0001 C CNN
+F 1 "GND" H 1255 3977 50  0000 C CNN
+F 2 "" H 1250 4150 50  0001 C CNN
+F 3 "" H 1250 4150 50  0001 C CNN
+	1    1250 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 4150 1250 4000
+Wire Wire Line
+	3150 1850 2950 1850
+Wire Wire Line
+	3150 1700 2950 1700
+$Comp
+L power:+5V #PWR0105
+U 1 1 5BD51BB4
+P 800 1800
+F 0 "#PWR0105" H 800 1650 50  0001 C CNN
+F 1 "+5V" H 815 1973 50  0000 C CNN
+F 2 "" H 800 1800 50  0001 C CNN
+F 3 "" H 800 1800 50  0001 C CNN
+	1    800  1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5BD51BEB
+P 1300 1900
+F 0 "#PWR0106" H 1300 1650 50  0001 C CNN
+F 1 "GND" H 1305 1727 50  0000 C CNN
+F 2 "" H 1300 1900 50  0001 C CNN
+F 3 "" H 1300 1900 50  0001 C CNN
+	1    1300 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 1900 1300 1850
+Wire Wire Line
+	2300 2000 2300 2150
+$Comp
+L Device:R R2
+U 1 1 5BD522E3
+P 1550 1600
+F 0 "R2" H 1620 1646 50  0000 L CNN
+F 1 "8.25k : 1%" H 1620 1555 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1480 1600 50  0001 C CNN
+F 3 "~" H 1550 1600 50  0001 C CNN
+	1    1550 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5BD52369
+P 1100 1600
+F 0 "C1" H 1215 1646 50  0000 L CNN
+F 1 "12uF" H 1215 1555 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Axial_L11.0mm_D5.0mm_P18.00mm_Horizontal" H 1138 1450 50  0001 C CNN
+F 3 "~" H 1100 1600 50  0001 C CNN
+	1    1100 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  1800 800  2150
+Wire Wire Line
+	1100 1800 1100 1750
+Wire Wire Line
+	1300 1800 1300 1850
+Wire Wire Line
+	1100 1800 1300 1800
+Connection ~ 1300 1850
+Wire Wire Line
+	1300 1800 1550 1800
+Wire Wire Line
+	1550 1800 1550 1750
+Connection ~ 1300 1800
+Wire Wire Line
+	1100 1450 1100 1300
+Wire Wire Line
+	1100 1300 1350 1300
+Wire Wire Line
+	1550 1300 1550 1450
+Wire Wire Line
+	2300 1700 2250 1700
+Wire Wire Line
+	2250 1700 2250 1200
+Wire Wire Line
+	1350 1200 1350 1300
+Connection ~ 1350 1300
+Wire Wire Line
+	1350 1300 1550 1300
+Wire Wire Line
+	1300 1850 2300 1850
+Wire Wire Line
+	800  2150 2300 2150
+Wire Wire Line
+	1350 1200 2250 1200
+$Comp
+L Device:R R3
+U 1 1 5BD594D6
+P 2450 5450
+F 0 "R3" H 2520 5496 50  0000 L CNN
+F 1 "10k" H 2520 5405 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2380 5450 50  0001 C CNN
+F 3 "~" H 2450 5450 50  0001 C CNN
+	1    2450 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 5700 2450 5600
+$Comp
+L power:+3.3V #PWR0107
+U 1 1 5BD59C32
+P 2450 5100
+F 0 "#PWR0107" H 2450 4950 50  0001 C CNN
+F 1 "+3.3V" H 2465 5273 50  0000 C CNN
+F 2 "" H 2450 5100 50  0001 C CNN
+F 3 "" H 2450 5100 50  0001 C CNN
+	1    2450 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 5100 2450 5150
+Wire Wire Line
+	2150 6300 2250 6300
+Wire Wire Line
+	2250 6300 2250 6550
+Wire Wire Line
+	2250 6550 2450 6550
+Wire Wire Line
+	2450 6550 2450 6450
+Wire Wire Line
+	2150 5700 2450 5700
+$Comp
+L Transistor_FET:BSS138 Q3
+U 1 1 5BD5CBAD
+P 5000 5850
+F 0 "Q3" H 5205 5896 50  0000 L CNN
+F 1 "BSS138" H 5205 5805 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5200 5775 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 5000 5850 50  0001 L CNN
+	1    5000 5850
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_FET:BSS138 Q2
+U 1 1 5BD5CC0D
+P 4750 6600
+F 0 "Q2" H 4955 6646 50  0000 L CNN
+F 1 "BSS138" H 4955 6555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4950 6525 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 4750 6600 50  0001 L CNN
+	1    4750 6600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0108
+U 1 1 5BD5E7DD
+P 4600 6300
+F 0 "#PWR0108" H 4600 6150 50  0001 C CNN
+F 1 "+3.3V" H 4615 6473 50  0000 C CNN
+F 2 "" H 4600 6300 50  0001 C CNN
+F 3 "" H 4600 6300 50  0001 C CNN
+	1    4600 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5BD5F9D7
+P 4400 6550
+F 0 "R5" H 4330 6504 50  0000 R CNN
+F 1 "10k" H 4330 6595 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4330 6550 50  0001 C CNN
+F 3 "~" H 4400 6550 50  0001 C CNN
+	1    4400 6550
+	-1   0    0    1   
+$EndComp
+Text GLabel 5450 6700 2    50   Input ~ 0
+SDA_5V
+Text GLabel 5450 5950 2    50   Input ~ 0
+SCK_5V
+Wire Wire Line
+	4550 6700 4400 6700
+Wire Wire Line
+	4400 6400 4600 6400
+Wire Wire Line
+	4600 6300 4600 6400
+Connection ~ 4600 6400
+Wire Wire Line
+	4600 6400 4750 6400
+Wire Wire Line
+	5450 5950 5200 5950
+$Comp
+L Device:R R6
+U 1 1 5BD6D87C
+P 4650 5800
+F 0 "R6" H 4580 5754 50  0000 R CNN
+F 1 "10k" H 4580 5845 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4580 5800 50  0001 C CNN
+F 3 "~" H 4650 5800 50  0001 C CNN
+	1    4650 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0109
+U 1 1 5BD6D8CE
+P 4850 5550
+F 0 "#PWR0109" H 4850 5400 50  0001 C CNN
+F 1 "+3.3V" H 4865 5723 50  0000 C CNN
+F 2 "" H 4850 5550 50  0001 C CNN
+F 3 "" H 4850 5550 50  0001 C CNN
+	1    4850 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 5950 4650 5950
+Wire Wire Line
+	4650 5650 4850 5650
+Wire Wire Line
+	4850 5550 4850 5650
+Connection ~ 4850 5650
+Wire Wire Line
+	4850 5650 5000 5650
+Wire Wire Line
+	4650 5950 4300 5950
+Connection ~ 4650 5950
+Wire Wire Line
+	4400 6700 4300 6700
+Connection ~ 4400 6700
+Text GLabel 4300 5950 0    50   Input ~ 0
+SCK_3.3V
+Text GLabel 4300 6700 0    50   Input ~ 0
+SDA_3.3V
+Wire Wire Line
+	4950 6700 5450 6700
+Wire Notes Line
+	5950 5200 5950 7200
+Wire Notes Line
+	5950 7200 3750 7200
+Wire Notes Line
+	3750 7200 3750 5200
+Wire Notes Line
+	3750 5200 5950 5200
+Text Notes 3900 5400 0    50   ~ 0
+I2C Level Shifter
+Wire Notes Line
+	650  700  650  2350
+Text Notes 800  900  0    50   ~ 0
+Ambient Light Sensor
+Text Notes 800  2650 0    50   ~ 0
+Air Quality Sensor
+Text GLabel 2450 5900 2    50   Input ~ 0
+SCK_3.3V
+Text GLabel 2450 6100 2    50   Input ~ 0
+SDA_3.3V
+Wire Wire Line
+	2450 6100 2150 6100
+Wire Wire Line
+	2150 5900 2450 5900
+Wire Wire Line
+	1450 5300 1450 5400
+Wire Wire Line
+	1650 5400 1650 5300
+Wire Wire Line
+	1450 5300 1550 5300
+Wire Wire Line
+	2450 5150 1550 5150
+Wire Wire Line
+	1550 5150 1550 5300
+Connection ~ 2450 5150
+Wire Wire Line
+	2450 5150 2450 5300
+Connection ~ 1550 5300
+Wire Wire Line
+	1550 5300 1650 5300
+Wire Wire Line
+	1450 6600 1450 6750
+Wire Wire Line
+	1450 6750 1550 6750
+Wire Wire Line
+	1650 6750 1650 6600
+Wire Wire Line
+	1550 6750 1550 6850
+Connection ~ 1550 6750
+Wire Wire Line
+	1550 6750 1650 6750
+$Comp
+L power:GND #PWR0110
+U 1 1 5BD8A4A3
+P 1550 6850
+F 0 "#PWR0110" H 1550 6600 50  0001 C CNN
+F 1 "GND" H 1555 6677 50  0000 C CNN
+F 2 "" H 1550 6850 50  0001 C CNN
+F 3 "" H 1550 6850 50  0001 C CNN
+	1    1550 6850
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	650  7200 650  4700
+Wire Notes Line
+	650  4700 3550 4700
+Wire Notes Line
+	3550 4700 3550 7200
+Wire Notes Line
+	3550 7200 650  7200
+Text Notes 800  4900 0    50   ~ 0
+Temperature & Humidity Sensor
+Text GLabel 5000 2250 0    50   Input ~ 0
+SCK_5V
+Text GLabel 5000 2150 0    50   Input ~ 0
+SDA_5V
+Wire Wire Line
+	5200 2150 5000 2150
+Wire Wire Line
+	5200 2250 5000 2250
+Text GLabel 5000 2050 0    50   Input ~ 0
+GAIN_CTR_2
+Text GLabel 5000 1950 0    50   Input ~ 0
+GAIN_CTR_1
+Wire Wire Line
+	5000 1950 5200 1950
+Wire Wire Line
+	5000 2050 5200 2050
+Wire Wire Line
+	750  3150 950  3150
+Text GLabel 5000 2350 0    50   Input ~ 0
+MQ-150_Toggle
+Wire Wire Line
+	5000 2350 5200 2350
+Wire Notes Line
+	650  4550 650  2500
+Wire Notes Line
+	650  2500 3350 2500
+Wire Notes Line
+	3350 2500 3350 4550
+Wire Notes Line
+	650  4550 3350 4550
+Text GLabel 6400 2850 2    50   Input ~ 0
+MQ-150_OUT
+Text GLabel 3150 1850 2    50   Input ~ 0
+GAIN_CTR_1
+Text GLabel 3150 1700 2    50   Input ~ 0
+GAIN_CTR_2
+Wire Notes Line
+	3700 2350 3700 700 
+Wire Notes Line
+	650  700  3700 700 
+Wire Notes Line
+	650  2350 3700 2350
+Wire Wire Line
+	5700 3350 5700 3450
+Wire Wire Line
+	5700 3450 5750 3450
+Wire Wire Line
+	5800 3450 5800 3350
+Wire Wire Line
+	5750 3450 5750 3550
+Connection ~ 5750 3450
+Wire Wire Line
+	5750 3450 5800 3450
+$Comp
+L power:GND #PWR0112
+U 1 1 5BDA9104
+P 5750 3550
+F 0 "#PWR0112" H 5750 3300 50  0001 C CNN
+F 1 "GND" H 5755 3377 50  0000 C CNN
+F 2 "" H 5750 3550 50  0001 C CNN
+F 3 "" H 5750 3550 50  0001 C CNN
+	1    5750 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0113
+U 1 1 5BDA921D
+P 5900 1150
+F 0 "#PWR0113" H 5900 1000 50  0001 C CNN
+F 1 "+5V" H 5915 1323 50  0000 C CNN
+F 2 "" H 5900 1150 50  0001 C CNN
+F 3 "" H 5900 1150 50  0001 C CNN
+	1    5900 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0114
+U 1 1 5BDA93BD
+P 5800 900
+F 0 "#PWR0114" H 5800 750 50  0001 C CNN
+F 1 "+3.3V" H 5815 1073 50  0000 C CNN
+F 2 "" H 5800 900 50  0001 C CNN
+F 3 "" H 5800 900 50  0001 C CNN
+	1    5800 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 900  5800 1350
+Wire Wire Line
+	5900 1150 5900 1350
+Text GLabel 10200 5700 2    50   Input ~ 0
+SOLAR+
+Text GLabel 10200 5800 2    50   Input ~ 0
+SOLAR-
+Text GLabel 9050 4550 2    50   Input ~ 0
+SOLAR+
+Wire Wire Line
+	7850 4450 7850 4550
+Connection ~ 7850 4650
+Wire Wire Line
+	7850 4650 7850 4750
+Connection ~ 7850 4550
+Wire Wire Line
+	7850 4550 7850 4650
+$Comp
+L power:GND #PWR0115
+U 1 1 5BDBFEF8
+P 7850 4850
+F 0 "#PWR0115" H 7850 4600 50  0001 C CNN
+F 1 "GND" H 7855 4677 50  0000 C CNN
+F 2 "" H 7850 4850 50  0001 C CNN
+F 3 "" H 7850 4850 50  0001 C CNN
+	1    7850 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 4850 7850 4750
+Connection ~ 7850 4750
+Wire Wire Line
+	8900 4750 9050 4750
+Text GLabel 10250 4600 2    50   Input ~ 0
+BATT+
+Text GLabel 10250 4700 2    50   Input ~ 0
+BATT-
+$Comp
+L Connector:Conn_01x02_Male J5
+U 1 1 5BDC9FB6
+P 9800 5700
+F 0 "J5" H 9906 5878 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 9906 5787 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 9800 5700 50  0001 C CNN
+F 3 "~" H 9800 5700 50  0001 C CNN
+	1    9800 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 5800 10100 5800
+Wire Wire Line
+	10200 5700 10000 5700
+$Comp
+L Connector:Conn_01x02_Male J4
+U 1 1 5BDD4127
+P 9850 4600
+F 0 "J4" H 9956 4778 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 9956 4687 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 9850 4600 50  0001 C CNN
+F 3 "~" H 9850 4600 50  0001 C CNN
+	1    9850 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 4600 10250 4600
+$Comp
+L power:GND #PWR0116
+U 1 1 5BDDE387
+P 10100 6100
+F 0 "#PWR0116" H 10100 5850 50  0001 C CNN
+F 1 "GND" H 10105 5927 50  0000 C CNN
+F 2 "" H 10100 6100 50  0001 C CNN
+F 3 "" H 10100 6100 50  0001 C CNN
+	1    10100 6100
+	1    0    0    -1  
+$EndComp
+Connection ~ 10100 5800
+Wire Wire Line
+	10100 5800 10000 5800
+Text GLabel 9050 4750 2    50   Input ~ 0
+BATT+
+Wire Wire Line
+	9050 4450 8900 4450
+Text GLabel 8600 5250 2    50   Input ~ 0
+CHG_ACTIVE
+Text GLabel 8300 5250 0    50   Input ~ 0
+CHG_STBY
+Wire Wire Line
+	9050 4550 8900 4550
+Wire Wire Line
+	9050 4650 8900 4650
+Text GLabel 5000 2450 0    50   Input ~ 0
+CHG_ACTIVE
+Text GLabel 5000 2550 0    50   Input ~ 0
+CHG_STBY
+Wire Wire Line
+	5000 2550 5200 2550
+Wire Wire Line
+	5200 2450 5000 2450
+Text GLabel 5450 1200 0    50   Input ~ 0
+NANO_VIN
+Wire Wire Line
+	5450 1200 5600 1200
+Wire Wire Line
+	5600 1200 5600 1350
+Text GLabel 7950 5750 0    50   Input ~ 0
+NANO_VIN
+Wire Wire Line
+	7950 5750 8100 5750
+Text GLabel 7950 5950 0    50   Input ~ 0
+BATT+
+Wire Wire Line
+	7950 5950 8100 5950
+Wire Wire Line
+	9000 5750 9100 5750
+Wire Wire Line
+	9100 5750 9100 5950
+Wire Wire Line
+	9100 5950 9000 5950
+$Comp
+L power:GND #PWR0118
+U 1 1 5BE07052
+P 9100 6050
+F 0 "#PWR0118" H 9100 5800 50  0001 C CNN
+F 1 "GND" H 9105 5877 50  0000 C CNN
+F 2 "" H 9100 6050 50  0001 C CNN
+F 3 "" H 9100 6050 50  0001 C CNN
+	1    9100 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 6050 9100 5950
+Connection ~ 9100 5950
+Text GLabel 6400 3050 2    50   Input ~ 0
+BATT+
+Wire Notes Line
+	7450 6350 10750 6350
+Text Notes 7650 4100 0    50   ~ 0
+Power Management
+$Comp
+L Connector:Conn_01x03_Male J3
+U 1 1 5BE15117
+P 5850 4500
+F 0 "J3" H 5956 4778 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 5956 4687 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_S3B-PH-K_1x03_P2.00mm_Horizontal" H 5850 4500 50  0001 C CNN
+F 3 "~" H 5850 4500 50  0001 C CNN
+	1    5850 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 4600 6250 4600
+Wire Wire Line
+	6250 4600 6250 4800
+$Comp
+L power:GND #PWR0119
+U 1 1 5BE18A78
+P 6250 4800
+F 0 "#PWR0119" H 6250 4550 50  0001 C CNN
+F 1 "GND" H 6255 4627 50  0000 C CNN
+F 2 "" H 6250 4800 50  0001 C CNN
+F 3 "" H 6250 4800 50  0001 C CNN
+	1    6250 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0120
+U 1 1 5BE18B0F
+P 6500 4750
+F 0 "#PWR0120" H 6500 4600 50  0001 C CNN
+F 1 "+5V" H 6515 4923 50  0000 C CNN
+F 2 "" H 6500 4750 50  0001 C CNN
+F 3 "" H 6500 4750 50  0001 C CNN
+	1    6500 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 4500 6400 4500
+Wire Wire Line
+	6400 4500 6400 4800
+Wire Wire Line
+	6400 4800 6500 4800
+Wire Wire Line
+	6500 4800 6500 4750
+Text GLabel 6400 4400 2    50   Input ~ 0
+SOIL_MOISTURE_OUT
+Wire Wire Line
+	6400 4400 6050 4400
+Text GLabel 6400 2950 2    50   Input ~ 0
+SOIL_MOISTURE_OUT
+Wire Wire Line
+	6400 3050 6200 3050
+Wire Wire Line
+	6200 2950 6400 2950
+Wire Wire Line
+	6400 2850 6200 2850
+Text GLabel 5000 1750 0    50   Input ~ 0
+D0
+Text GLabel 5000 1850 0    50   Input ~ 0
+D1
+Wire Wire Line
+	5000 1850 5200 1850
+Wire Wire Line
+	5000 1750 5200 1750
+NoConn ~ 6200 2150
+NoConn ~ 6200 1850
+NoConn ~ 6200 1750
+Text GLabel 5000 3050 0    50   Input ~ 0
+SPI_CLK
+Text GLabel 5000 2950 0    50   Input ~ 0
+SPI_MISO
+Text GLabel 5000 2850 0    50   Input ~ 0
+SPI_MOSI
+Text GLabel 5000 2750 0    50   Input ~ 0
+SPI_SS
+Wire Wire Line
+	5000 2750 5200 2750
+Wire Wire Line
+	5200 2850 5000 2850
+Wire Wire Line
+	5000 2950 5200 2950
+Wire Wire Line
+	5200 3050 5000 3050
+Text GLabel 8650 950  0    50   Input ~ 0
+SPI_SS
+Text GLabel 8650 1250 0    50   Input ~ 0
+SPI_CLK
+Text GLabel 8650 1150 0    50   Input ~ 0
+SPI_MISO
+Text GLabel 8650 1050 0    50   Input ~ 0
+SPI_MOSI
+Wire Wire Line
+	8650 1250 8950 1250
+Wire Wire Line
+	8650 1150 8950 1150
+Wire Wire Line
+	8650 1050 8950 1050
+Wire Notes Line
+	5500 5050 5500 3950
+Wire Notes Line
+	5500 3950 7300 3950
+Wire Notes Line
+	7300 3950 7300 5050
+Wire Notes Line
+	7300 5050 5500 5050
+Text Notes 5600 4100 0    50   ~ 0
+Soil Moisture Sensor
+Wire Wire Line
+	6200 2350 6600 2350
+Wire Wire Line
+	6200 2450 6600 2450
+Wire Wire Line
+	6200 2550 6600 2550
+Wire Wire Line
+	6200 2650 6400 2650
+Wire Wire Line
+	5000 2650 5200 2650
+Wire Wire Line
+	8400 5100 8400 5250
+Wire Wire Line
+	8400 5250 8300 5250
+Wire Wire Line
+	8500 5100 8500 5250
+Wire Wire Line
+	8500 5250 8600 5250
+Text GLabel 9050 4650 2    50   Input ~ 0
+BATT-
+Text GLabel 9050 4450 2    50   Input ~ 0
+NANO_VIN
+Wire Notes Line
+	10750 3950 7450 3950
+Wire Notes Line
+	10750 3950 10750 6350
+Wire Notes Line
+	7450 3950 7450 6350
+Wire Wire Line
+	7850 4450 8000 4450
+Wire Wire Line
+	7850 4550 8000 4550
+Wire Wire Line
+	7850 4650 8000 4650
+Wire Wire Line
+	7850 4750 8000 4750
+Wire Wire Line
+	10050 4700 10250 4700
+Wire Wire Line
+	8950 950  8650 950 
+$Comp
+L power:+3.3V #PWR0117
+U 1 1 5BFA3964
+P 8050 1300
+F 0 "#PWR0117" H 8050 1150 50  0001 C CNN
+F 1 "+3.3V" H 8065 1473 50  0000 C CNN
+F 2 "" H 8050 1300 50  0001 C CNN
+F 3 "" H 8050 1300 50  0001 C CNN
+	1    8050 1300
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8950 1550
+Wire Wire Line
+	8650 850  8950 850 
+Text GLabel 5000 2650 0    50   Input ~ 0
+CARD_DETECT
+Text GLabel 8650 850  0    50   Input ~ 0
+CARD_DETECT
+Wire Notes Line
+	7850 1650 7850 550 
+Wire Notes Line
+	7850 550  10650 550 
+Wire Notes Line
+	10650 550  10650 1650
+Wire Notes Line
+	10650 1650 7850 1650
+Text Notes 9700 700  0    50   ~ 0
+MicroSD Card Reader
+$Comp
+L power:GND #PWR0121
+U 1 1 5BFC5D9A
+P 8200 1350
+F 0 "#PWR0121" H 8200 1100 50  0001 C CNN
+F 1 "GND" H 8205 1177 50  0000 C CNN
+F 2 "" H 8200 1350 50  0001 C CNN
+F 3 "" H 8200 1350 50  0001 C CNN
+	1    8200 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 1600 8350 1600
+Wire Wire Line
+	8350 1600 8350 1450
+Wire Wire Line
+	8350 1450 8950 1450
+Wire Wire Line
+	8050 1300 8050 1600
+Wire Wire Line
+	8200 1350 8950 1350
+Text GLabel 2250 1200 2    50   Input ~ 0
+LIGHT_SENSE_CURRENT
+Text GLabel 10300 6000 2    50   Input ~ 0
+GND
+Wire Wire Line
+	10100 5800 10100 6000
+Wire Wire Line
+	10100 6000 10300 6000
+Wire Wire Line
+	10100 6000 10100 6100
+Connection ~ 10100 6000
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 5BFFE26A
+P 5700 2350
+F 0 "A1" H 5700 1264 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 5700 1173 50  0000 C CNN
+F 2 "Module:Arduino_Nano_WithMountingHoles" H 5850 1400 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 5700 1350 50  0001 C CNN
+	1    5700 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L TT_Module:RobotDyn_MicroSD_Card_Reader M3
+U 1 1 5BFFE7D5
+P 9150 1200
+F 0 "M3" H 9327 1251 50  0000 L CNN
+F 1 "RobotDyn_MicroSD_Card_Reader" H 9327 1160 50  0000 L CNN
+F 2 "TT_Module:RobotDyn_MicroSD_Card_Reader" H 9050 1300 50  0001 C CNN
+F 3 "" H 9050 1300 50  0001 C CNN
+	1    9150 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L TT_Module:RobotDyn_Li-Ion_Charger_W-Protection M1
+U 1 1 5BFF77B0
+P 8450 4600
+F 0 "M1" H 8450 4975 50  0000 C CNN
+F 1 "RobotDyn_Li-Ion_Charger_W-Protection" H 8450 4884 50  0000 C CNN
+F 2 "TT_Module:RobotDyn_Li-Ion_Charger_W-Protection" H 8450 4500 50  0001 C CNN
+F 3 "" H 8450 4500 50  0001 C CNN
+	1    8450 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L TT_Module:MT3608_Boost_Regulator M2
+U 1 1 5C00091F
+P 8550 5850
+F 0 "M2" H 8550 6215 50  0000 C CNN
+F 1 "MT3608_Boost_Regulator" H 8550 6124 50  0000 C CNN
+F 2 "TT_Module:MT3608_Boost_Regulator" H 8550 5850 50  0001 C CNN
+F 3 "" H 8550 5850 50  0001 C CNN
+	1    8550 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Gas:MQ-135 U2
+U 1 1 5C001102
+P 2150 3450
+F 0 "U2" H 2150 3775 50  0000 C CNN
+F 1 "MQ-135" H 2150 3684 50  0000 C CNN
+F 2 "Sensor_Gas:MQ-135" H 2150 3450 50  0001 C CNN
+F 3 "" H 2150 3450 50  0001 C CNN
+	1    2150 3450
+	1    0    0    -1  
+$EndComp
+Text GLabel 6400 2750 2    50   Input ~ 0
+LIGHT_SENSE_CURRENT
+Wire Wire Line
+	6400 2750 6200 2750
+Text GLabel 6400 2650 2    50   Input ~ 0
+MQ-135_OVERRIDE
+Text GLabel 8800 3350 2    50   Input ~ 0
+MQ-135_OVERRIDE
+$Comp
+L power:GND #PWR0122
+U 1 1 5C01B252
+P 8100 3500
+F 0 "#PWR0122" H 8100 3250 50  0001 C CNN
+F 1 "GND" H 8105 3327 50  0000 C CNN
+F 2 "" H 8100 3500 50  0001 C CNN
+F 3 "" H 8100 3500 50  0001 C CNN
+	1    8100 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 3500 8100 3350
+Wire Wire Line
+	8100 3350 8300 3350
+$Comp
+L Switch:SW_SPST SW1
+U 1 1 5C027699
+P 8500 3350
+F 0 "SW1" H 8500 3585 50  0000 C CNN
+F 1 "SW_SPST" H 8500 3494 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_DIP_SPSTx01_Slide_6.7x4.1mm_W7.62mm_P2.54mm_LowProfile" H 8500 3350 50  0001 C CNN
+F 3 "" H 8500 3350 50  0001 C CNN
+	1    8500 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 3350 8700 3350
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5C02DD2C
+P 4200 3850
+F 0 "H1" H 4300 3896 50  0000 L CNN
+F 1 "MountingHole" H 4300 3805 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 4200 3850 50  0001 C CNN
+F 3 "~" H 4200 3850 50  0001 C CNN
+	1    4200 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5C02DE56
+P 4200 4050
+F 0 "H2" H 4300 4096 50  0000 L CNN
+F 1 "MountingHole" H 4300 4005 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 4200 4050 50  0001 C CNN
+F 3 "~" H 4200 4050 50  0001 C CNN
+	1    4200 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5C02DEB4
+P 4200 4250
+F 0 "H3" H 4300 4296 50  0000 L CNN
+F 1 "MountingHole" H 4300 4205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 4200 4250 50  0001 C CNN
+F 3 "~" H 4200 4250 50  0001 C CNN
+	1    4200 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5C02DEFC
+P 4200 4450
+F 0 "H4" H 4300 4496 50  0000 L CNN
+F 1 "MountingHole" H 4300 4405 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 4200 4450 50  0001 C CNN
+F 3 "~" H 4200 4450 50  0001 C CNN
+	1    4200 4450
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2950 2000
+$Comp
+L Switch:SW_Push SW2
+U 1 1 5C034F36
+P 9300 2150
+F 0 "SW2" H 9300 2435 50  0000 C CNN
+F 1 "SW_Push" H 9300 2344 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H4.3mm" H 9300 2350 50  0001 C CNN
+F 3 "" H 9300 2350 50  0001 C CNN
+	1    9300 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW3
+U 1 1 5C03512C
+P 9300 2600
+F 0 "SW3" H 9300 2885 50  0000 C CNN
+F 1 "SW_Push" H 9300 2794 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H4.3mm" H 9300 2800 50  0001 C CNN
+F 3 "" H 9300 2800 50  0001 C CNN
+	1    9300 2600
+	1    0    0    -1  
+$EndComp
+Text GLabel 6600 2550 2    50   Input ~ 0
+BUTTON_2
+Text GLabel 6600 2450 2    50   Input ~ 0
+BUTTON_1
+Text GLabel 6600 2350 2    50   Input ~ 0
+INDICATOR_LED
+$Comp
+L Device:LED D1
+U 1 1 5C0355BE
+P 8550 2900
+F 0 "D1" H 8541 3116 50  0000 C CNN
+F 1 "LED" H 8541 3025 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 8550 2900 50  0001 C CNN
+F 3 "~" H 8550 2900 50  0001 C CNN
+	1    8550 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5C041E6C
+P 9050 2900
+F 0 "R7" H 9120 2946 50  0000 L CNN
+F 1 "4.7k" H 9120 2855 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8980 2900 50  0001 C CNN
+F 3 "~" H 9050 2900 50  0001 C CNN
+	1    9050 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8900 2900 8700 2900
+Wire Wire Line
+	8400 2900 8100 2900
+Wire Wire Line
+	8100 2900 8100 3350
+Connection ~ 8100 3350
+Wire Wire Line
+	9100 2150 9100 2350
+Wire Wire Line
+	9100 2350 8100 2350
+Connection ~ 8100 2900
+Wire Wire Line
+	9100 2600 8100 2600
+Wire Wire Line
+	8100 2350 8100 2600
+Connection ~ 8100 2600
+Wire Wire Line
+	8100 2600 8100 2900
+Text GLabel 9600 2150 2    50   Input ~ 0
+BUTTON_1
+Text GLabel 9600 2600 2    50   Input ~ 0
+BUTTON_2
+Wire Wire Line
+	9600 2600 9500 2600
+Wire Wire Line
+	9500 2150 9600 2150
+Wire Notes Line
+	7850 1800 10650 1800
+Wire Notes Line
+	10650 1800 10650 3800
+Wire Notes Line
+	10650 3800 7850 3800
+Wire Notes Line
+	7850 3800 7850 1800
+Text GLabel 9450 2900 2    50   Input ~ 0
+INDICATOR_LED
+Wire Wire Line
+	9450 2900 9200 2900
+$EndSCHEMATC
